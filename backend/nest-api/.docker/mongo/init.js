@@ -3,12 +3,12 @@ db.routes.insertMany([
         _id: '1',
         title: 'Primeiro',
         startPosition: { lat: -15.82594, lng: -47.92923 },
-        endPosition: { lat: -15.92942, lng: -47.92765 },
+        endPosition: { lat: -15.82942, lng: -47.92765 },
     },
     {
         _id: '2',
         title: 'Segundo',
-        startPosition: { lat: -15.82449, lng: -47.92765 },
+        startPosition: { lat: -15.82449, lng: -47.92756 },
         endPosition: { lat: -15.8276, lng: -47.92621 },
     },
     {
