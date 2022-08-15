@@ -6,5 +6,7 @@
         "statusBarItem.remoteBackground": "#00b3e6",
         "statusBarItem.remoteForeground": "#15202b"
     },
-    "peacock.remoteColor": "#00b3e6"
+    "peacock.remoteColor": "#00b3e6",
+    "prettier.singleQuote": false,
+    "prettier.trailingComma": "all",
 }
