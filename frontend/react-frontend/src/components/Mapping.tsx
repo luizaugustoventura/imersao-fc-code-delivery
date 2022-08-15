@@ -36,19 +36,19 @@ const colors = [
 
 const useStyles = makeStyles({
   root: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   form: {
-    margin: '16px',
+    margin: "16px",
   },
   btnSubmitWrapper: {
-    textAlign: 'center',
-    marginTop: '8px',
+    textAlign: "center",
+    marginTop: "8px",
   },
   map: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
 });
 
@@ -60,10 +60,44 @@ export const Mapping: FunctionComponent = () => {
   const socketIORef = useRef<SocketIOClient.Socket>();
   const { enqueueSnackbar } = useSnackbar();
 
+  const finishRoute = useCallback(
+    (route: Route) => {
+      enqueueSnackbar(`${route.title} finalizou!`, {
+        variant: "success",
+      });
+      mapRef.current?.removeRoute(route._id);
+    },
+    [enqueueSnackbar],
+  );
+
   useEffect(() => {
-    socketIORef.current = io.connect(API_URL);
-    socketIORef.current.on('connect', () => console.log('conectou'));
-  }, []);
+    if (!socketIORef.current?.connected) {
+      socketIORef.current = io.connect(API_URL);
+      socketIORef.current.on("connect", () => console.log("conectou"));
+    }
+
+    const handler = (data: {
+      routeId: string;
+      position: [number, number];
+      finished: boolean;
+    }) => {
+      mapRef.current?.moveCurrentMarker(data.routeId, {
+        lat: data.position[0],
+        lng: data.position[1],
+      });
+      const route = routes.find(
+        (route) => route._id === data.routeId,
+      ) as Route;
+      if (data.finished) {
+        finishRoute(route);
+      }
+    };
+
+    socketIORef.current?.on("new-position", handler);
+    return () => {
+      socketIORef.current?.off('new-position', handler);
+    }
+  }, [finishRoute, routes, routeIdSelected]);
 
   useEffect(() => {
     fetch(`${API_URL}/routes`)
@@ -74,7 +108,7 @@ export const Mapping: FunctionComponent = () => {
   useEffect(() => {
     (async () => {
       const [, position] = await Promise.all([
-        await googleMapsLoader.load(),
+        googleMapsLoader.load(),
         getCurrentPosition({ enableHighAccuracy: true }),
       ]);
 
@@ -103,8 +137,8 @@ export const Mapping: FunctionComponent = () => {
             icon: makeMarkerIcon(color),
           },
         });
-        socketIORef.current?.emit('new-direction', {
-          routeId: routeIdSelected
+        socketIORef.current?.emit("new-direction", {
+          routeId: routeIdSelected,
         });
       } catch (error) {
         if (error instanceof RouteExistsError) {
@@ -117,7 +151,7 @@ export const Mapping: FunctionComponent = () => {
         throw error;
       }
     },
-    [routeIdSelected, routes, enqueueSnackbar]
+    [routeIdSelected, routes, enqueueSnackbar],
   );
 
   return (
@@ -148,7 +182,7 @@ export const Mapping: FunctionComponent = () => {
         </form>
       </Grid>
       <Grid item xs={12} sm={9}>
-        <div id="map" className={classes.map}></div>
+        <div id="map" className={classes.map} />
       </Grid>
     </Grid>
   );
