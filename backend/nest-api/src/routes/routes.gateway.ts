@@ -1,11 +1,15 @@
-import { Inject, OnModuleInit } from '@nestjs/common';
+import { Inject } from '@nestjs/common';
 import { ClientKafka } from '@nestjs/microservices';
 import { Producer } from '@nestjs/microservices/external/kafka.interface';
-import { SubscribeMessage, WebSocketGateway } from '@nestjs/websockets';
+import {
+  OnGatewayInit,
+  SubscribeMessage,
+  WebSocketGateway,
+} from '@nestjs/websockets';
 import { Socket } from 'socket.io';
 
 @WebSocketGateway()
-export class RoutesGateway implements OnModuleInit {
+export class RoutesGateway implements OnGatewayInit {
   private kafkaProducer: Producer;
 
   constructor(
@@ -13,7 +17,7 @@ export class RoutesGateway implements OnModuleInit {
     private kafkaClient: ClientKafka,
   ) {}
 
-  async onModuleInit() {
+  async afterInit() {
     this.kafkaProducer = await this.kafkaClient.connect();
   }
 
