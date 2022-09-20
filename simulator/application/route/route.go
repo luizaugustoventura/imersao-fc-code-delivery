@@ -20,11 +20,17 @@ type Position struct {
 	Long float64 `json:"long"`
 }
 
+type GeoJsonPosition struct {
+	Lat float64 `json:"lat"`
+	Lon float64 `json:"lon"`
+}
+
 type PartialRoutePosition struct {
-	ID       string    `json:"routeId"`
-	ClientID string    `json:"clientId"`
-	Position []float64 `json:"position"`
-	Finished bool      `json:"finished"`
+	ID              string          `json:"routeId"`
+	ClientID        string          `json:"clientId"`
+	Position        []float64       `json:"position"`
+	GeoJsonPosition GeoJsonPosition `json:"geoJsonPosition"`
+	Finished        bool            `json:"finished"`
 }
 
 func NewRoute() *Route {
@@ -68,6 +74,8 @@ func (r *Route) ExportJsonPositions() ([]string, error) {
 		route.ID = r.ID
 		route.ClientID = r.ClientID
 		route.Position = []float64{v.Lat, v.Long}
+		route.GeoJsonPosition.Lat = v.Lat
+		route.GeoJsonPosition.Lon = v.Long
 		route.Finished = false
 		if total-1 == k {
 			route.Finished = true
