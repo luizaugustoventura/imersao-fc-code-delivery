@@ -30,7 +30,7 @@
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/platform-socket.io": "^7.6.15",
     "@nestjs/websockets": "^7.6.15",
-    "kafkajs": "^2.1.0",
+    "kafkajs": "^1.15.0",
     "mongoose": "^6.4.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
