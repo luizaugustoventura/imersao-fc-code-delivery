@@ -1,0 +1,138 @@
+<mxfile host="65bd71144e">
+    <diagram id="8EirVNu_6AtDNZnTqa_H" name="Page-1">
+        <mxGraphModel dx="1616" dy="1012" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#E6E6E6" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="10" style="edgeStyle=none;html=1;fontSize=17;fontColor=#FFFFFF;fillColor=#60a917;strokeColor=#2D7600;strokeWidth=3;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="290" as="sourcePoint"/>
+                        <mxPoint x="130" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;fontSize=17;fontColor=#FF0000;strokeColor=#CC0000;strokeWidth=3;fillColor=#d80073;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="160.47058823529414" y="390" as="targetPoint"/>
+                        <mxPoint x="160" y="290" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;fontSize=17;fontColor=#314354;strokeColor=#BD7000;strokeWidth=3;fillColor=#f0a30a;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="90" y="220" as="sourcePoint"/>
+                        <mxPoint x="90" y="460" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="60" y="220"/>
+                            <mxPoint x="60" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="160" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="ReatJS&lt;br style=&quot;font-size: 18px;&quot;&gt;(frontend)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FFFFFF;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="112.5" y="196" width="95" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;fontSize=17;fontColor=#A50040;strokeColor=#0000FF;strokeWidth=3;fillColor=#647687;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="189.88235294117658" y="290" as="targetPoint"/>
+                        <mxPoint x="190" y="390" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;fontSize=17;fontColor=#C73500;strokeColor=#009999;strokeWidth=3;fillColor=#e3c800;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="129.88235294117658" y="630" as="targetPoint"/>
+                        <mxPoint x="130" y="530" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;fontSize=17;fontColor=#FF8000;strokeColor=#6D1F00;strokeWidth=3;fillColor=#a0522d;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="189.88235294117658" y="630" as="targetPoint"/>
+                        <mxPoint x="190" y="530" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="400" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="NestJS&lt;br&gt;(backend)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FFFFFF;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="110.5" y="435" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="640" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Apache Kafka&lt;br style=&quot;font-size: 17px;&quot;&gt;(message&lt;br style=&quot;font-size: 17px;&quot;&gt;broker)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FFFFFF;fontStyle=1;fontSize=17;" vertex="1" parent="1">
+                    <mxGeometry x="95.5" y="665" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;fontSize=17;fontColor=#00CCCC;strokeColor=#314354;strokeWidth=3;fillColor=#e51400;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="160.47058823529414" y="770" as="targetPoint"/>
+                        <mxPoint x="160" y="870" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="880" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Golang&lt;br style=&quot;font-size: 17px;&quot;&gt;(simulator&lt;br style=&quot;font-size: 17px;&quot;&gt;microservice)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FFFFFF;fontStyle=1;fontSize=17;" vertex="1" parent="1">
+                    <mxGeometry x="95.5" y="905" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;font color=&quot;#2d7600&quot;&gt;1&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontColor=#FFFFFF;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="105" y="326" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;font color=&quot;#cc0000&quot;&gt;2&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontColor=#FF0000;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="165" y="326" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;font color=&quot;#0000ff&quot;&gt;3&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontColor=#FF0000;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="200" y="326" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;b&gt;&lt;font color=&quot;#bd7000&quot;&gt;4&lt;/font&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontColor=#FF0000;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="320" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;b&gt;&lt;font color=&quot;#009999&quot;&gt;5&lt;/font&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontColor=#FF0000;" vertex="1" parent="1">
+                    <mxGeometry x="105" y="570" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;b&gt;&lt;font color=&quot;#314354&quot;&gt;6&lt;/font&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontColor=#FF0000;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="810" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;b&gt;&lt;font color=&quot;#6d1f00&quot;&gt;7&lt;/font&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontColor=#FF0000;" vertex="1" parent="1">
+                    <mxGeometry x="195" y="570" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=none;html=1;fontSize=17;fontColor=#314354;strokeColor=#660066;strokeWidth=3;fillColor=#fa6800;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="230" y="461" as="sourcePoint"/>
+                        <mxPoint x="230" y="221" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="260" y="461"/>
+                            <mxPoint x="260" y="221"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="&lt;b&gt;&lt;font color=&quot;#660066&quot;&gt;8&lt;/font&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontColor=#FF0000;" vertex="1" parent="1">
+                    <mxGeometry x="273" y="320" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;font color=&quot;#2d7600&quot; style=&quot;font-size: 20px;&quot;&gt;1 - Frontend connects to backend's WebSocket&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;fontColor=#660066;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="405" width="430" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;font color=&quot;#cc0000&quot; style=&quot;font-size: 20px;&quot;&gt;2 - HTTP Request to get Routes&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;fontColor=#660066;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="444" width="300" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;font color=&quot;#0000ff&quot; style=&quot;font-size: 20px;&quot;&gt;3 - Backend gets Routes from MongoDB and&lt;br style=&quot;font-size: 20px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;returns to frontend&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;fontColor=#660066;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="490" width="410" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;font color=&quot;#bd7000&quot; style=&quot;font-size: 20px;&quot;&gt;4 - Frontend emits WebSocket event to request&lt;br style=&quot;font-size: 20px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;route start&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;fontColor=#660066;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="549" width="430" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;font color=&quot;#009999&quot; style=&quot;font-size: 20px;&quot;&gt;5 - Publishes RouteId and ClientId to Kafka topic&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;fontColor=#660066;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="609" width="450" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="&lt;font color=&quot;#314354&quot; style=&quot;font-size: 20px;&quot;&gt;6 - Simulator connected to Kafka reads message and&lt;br style=&quot;font-size: 20px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;starts publishing Route positions to Kafka topic&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;fontColor=#660066;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="650" width="490" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;font color=&quot;#6d1f00&quot; style=&quot;font-size: 20px;&quot;&gt;7 - Backends reads route positions from Kafka topic&lt;br style=&quot;font-size: 20px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;and emits WebScoket event with them&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;fontColor=#660066;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="712" width="470" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="8 - Frontend receives route positions from WebSocket&lt;br style=&quot;font-size: 20px&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;and updates the map" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;fontColor=#660066;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="781" width="488" height="52" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
