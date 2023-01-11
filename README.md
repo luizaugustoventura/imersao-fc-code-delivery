@@ -10,4 +10,4 @@ O objetivo da imersão é aprender uma forma de comunicação assíncrona para a
 
 ## Fluxo arquitetural
 
-![Fluxo arquitetural](docs/arch_flow.png)
+![Fluxo arquitetural](docs/arch/arch_flow.png)
