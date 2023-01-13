@@ -20,3 +20,42 @@
     * Encontre a opção **Insecure origins treated as secure**, habilite-a e insira o endereço de IP que você obteve pelo service do Kubernetes.
     *Obs: Você pode consultar o endereço de IP do seu service consultando: kubectl get services*;
     * Reinicie o navegador e tente acessar novamente.
+
+## Executando aplicação localmente
+
+Para executar aplicação no ambiente local, basta executar `docker-compose up` no diretório de cada aplicação.
+
+A ordem é importante, portanto vamos subir:
+1. Kafka
+2. Simulator Go
+3. Backend NestJS
+4. Frontend ReactJS
+
+## Preparativos para o deploy
+
+Antes de prosseguir para o deploy, você deve garantir que seu **kubectl** já está conectado ao seu cluster Kubernetes. Neste caso, eu conectei num cluster da Google Cloud usando o *gcloud cli*.
+
+Além disso, do modo como o projeto foi desenvolvido, você vai precisar criar um cluster Kafka no site da [Confluent](https://confluent.cloud/), criar nele os tópicos **route.new-direction** e **route.new-position**, configurar um client (pode ser um client Go), e, deste client, pegar o **username**, o **password** e o **bootstrap-servers** para usar nos **Config Maps** e nos **.env**.
+
+Ainda, antes de prosseguir, você vai precisar subir as imagens do Simulator Go, do Backend NestJS e do Frontend ReactJS para **Docker Hub**, de modo que o Kubernetes possa acessá-las para subir suas aplicações. Para isto, acesse a pasta de cada uma dessas aplicações e execute:
+
+```
+sudo docker build -t your_docker_username/your_image_name -f Dockerfile.prod .
+
+sudo docker push your_docker_username/your_image_name
+```
+*Obs: No caso do Frontend ReactJS, não se esqueça de atualizar o **.env** antes de subir para o Docker Hub, visto que os dados dele são passados para a aplicação no momento do build.*
+
+Por fim, agora que você já tem as imagens no Docker Hub, atualize os arquivos **deploy.yaml** que estão na pasta **k8s** com as imagens que você subiu.
+
+## Fazendo deploy com o Kubernetes
+
+1. Simulator Go
+    * Execute os seguintes comandos:
+        ```
+        kubectl apply -f k8s/simulator/configmap.yaml
+
+        kubectl apply -f k8s/simulator/deploy.yaml
+        ```
+2. MongoDB
+    * Siga as intruções detalhadas no README da pasta *mongodb
