@@ -58,4 +58,27 @@ Por fim, agora que você já tem as imagens no Docker Hub, atualize os arquivos 
         kubectl apply -f k8s/simulator/deploy.yaml
         ```
 2. MongoDB
-    * Siga as intruções detalhadas no README da pasta *mongodb
+    * Siga as instruções detalhadas no README da pasta **mongodb**
+
+3. Backend NestJS
+    * A configuração inicial do backend é muito parecida com a do Simulator Go, o que muda são os nomes de algumas variáveis de ambiente no ConfigMap. Execute então os seguintes comandos:
+        ```
+        kubectl apply -f k8s/backend/configmap.yaml
+
+        kubectl apply -f k8s/backend/deploy.yaml
+        ```
+    * Para que seja possível acessarmos este pod externamente, precisamos gerar um IP de modo que todo mundo que acesse o IP seja direcionado para este pod. Por isso utilizarmos o **service** do tipo **LoadBalancer**. Para isto, execute:
+        ```
+        kubectl apply -f k8s/backend/service.yaml
+        ```
+        *Obs: No Kubernetes, à medida que você começa a subir muitos services no seu dia-a-dia, é recomendável trocar o LoadBalancer por um Ingress. Este trabalha com apenas um IP, onde você manda todo o tráfego e ele distribui os serviços.*
+
+        *No mundo real, se você tiver muitos services expostos para a rede, você não vai querer ficar gastando dinheiro com IP e coisas do tipo, portanto, o Ingress faz mais sentido.*
+
+4. Frontend ReactJS
+    * No frontend, também utilizamos variáveis de ambiente, porém, elas elas serão geradas somente na hora de fazer o build do projeto, pois teremos um projeto estático. Para resolver este problema, execute `kubectl get services`, pegue o IP exibido e coloque-o no **.env**
+    * Agora, para subir as configurações, você pode executar:
+        ```
+        kubectl apply -f k8s/frontend/
+        ```
+        *Obs: Executando o comando desta forma, você aplica todas as configurações que estão na pasta **frontend**.* 
