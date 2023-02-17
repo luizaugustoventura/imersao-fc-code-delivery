@@ -26,3 +26,7 @@ O objetivo da imersão é aprender uma forma de comunicação assíncrona para a
 * Kubernetes
 * ElasticSearch
 * Kibana
+
+## Captura de tela
+
+![Gif da aplicação](docs/assets/codelivery_animation.gif)
