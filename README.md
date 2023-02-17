@@ -11,3 +11,18 @@ O objetivo da imersão é aprender uma forma de comunicação assíncrona para a
 ## Fluxo arquitetural
 
 ![Fluxo arquitetural](docs/arch/arch_flow.png)
+
+## Ferramentas e tecnologias utilizadas
+* Golang
+* JavaScript
+* TypeScript
+* NestJS
+* ReactJS
+* WebSocket
+* Docker
+* MongoDB
+* Apache Kafka
+* Kafka Connect
+* Kubernetes
+* ElasticSearch
+* Kibana
