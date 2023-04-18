@@ -8,9 +8,9 @@ O projeto consiste em um website que exibe o rastreamento em tempo real de um ob
 
 O objetivo da imersão é aprender uma forma de comunicação assíncrona para aplicações de grande porte, utilizando-se do Apache Kafka como grande aliado para a transmissão de informações entre micro-serviços.
 
-## Fluxo arquitetural
+## Fluxo arquitetônico
 
-![Fluxo arquitetural](docs/arch/arch_flow.png)
+![Fluxo arquitetônico](docs/arch/arch_flow.png)
 
 ## Ferramentas e tecnologias utilizadas
 * Golang
