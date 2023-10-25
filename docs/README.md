@@ -8,7 +8,7 @@
 
     `172.17.0.1 host.docker.internal`
 
-2. Ainda pode ser que você venha a ter um problema relacionado ao consumo de memória pelo Docker, caso esteja utlizando WSL (Windows Subsystem for Linux). Neste caso, execute o seguinte comando dentro do seu Linux:
+2. Ainda pode ser que você venha a ter um problema relacionado ao consumo de memória pelo Docker, caso esteja utilizando WSL (Windows Subsystem for Linux). Neste caso, execute o seguinte comando dentro do seu Linux:
 
     `sudo sysctl -w vm.max_map_count=262144`
 
