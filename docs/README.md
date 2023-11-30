@@ -14,7 +14,11 @@
 
     *Você pode aumentar ou diminuir o valor, caso achar necessário.*
 
-3. Caso você tenha feito o deploy do projeto em um cluster Kubernetes, se você tentar acessar a aplicação por meio do IP entregue pelo **service** do Kubernetes, vai notar que o mapa não aparece e um erro **GeolocationPositionError** é exibido no console do navegador com uma ***message: "Only secure origins are allowed (see: https://goo.gl/Y0ZkNV)".*** Isso acontece porque não temos nada de TLS configurado, e, por padrão, a API do Google Maps só aceita ser acessada por meio de uma **origem https**. Para testes, podemos contornar isso da seguinte maneira:
+3. Em sistemas Linux, pode ser que você não consiga subir o Kibana e, ao tentar acessá-lo em *localhost:5601*, obtenha a seguinte mensagem de erro: ***Kibana server is not ready yet***. Isto acontece porque o diretório *es01* não tem as permissões corretas para que o Elastic Search que está rodando no container possa ler e escrever nele. Para corrigir este problema, basta navegar até onde se encontra o diretório *es01* e executar o seguinte comando:
+
+    `sudo chown -R 1000:root es01`
+
+4. Caso você tenha feito o deploy do projeto em um cluster Kubernetes, se você tentar acessar a aplicação por meio do IP entregue pelo **service** do Kubernetes, vai notar que o mapa não aparece e um erro **GeolocationPositionError** é exibido no console do navegador com uma ***message: "Only secure origins are allowed (see: https://goo.gl/Y0ZkNV)".*** Isso acontece porque não temos nada de TLS configurado, e, por padrão, a API do Google Maps só aceita ser acessada por meio de uma **origem https**. Para testes, podemos contornar isso da seguinte maneira:
 
     * Acesse no seu navegador **chome://flags**;
     * Encontre a opção **Insecure origins treated as secure**, habilite-a e insira o endereço de IP que você obteve pelo service do Kubernetes.
@@ -30,6 +34,13 @@ A ordem é importante, portanto vamos subir:
 2. Simulator Go
 3. Backend NestJS
 4. Frontend ReactJS
+
+*Obs: É importante lembrar que, para conectar ao Apache Kafka executando em container local, é necessário comentar as configurações de **ssl** e **sasl** nos arquivos:*
+* *simulator/infra/kafka/consumer.go*
+* *simulator/infra/kafka/producer.go*
+* *nest-api/src/main.ts*
+* *nest-api/src/routes/routes.module.ts*
+
 
 ## Preparativos para o deploy
 
