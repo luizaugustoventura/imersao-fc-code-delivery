@@ -121,7 +121,7 @@ Agora, clique no botão **Create new visualization** e vá em **Lens** (uma das 
     * Agora, ao invés de ir selecionar uma visualização do tipo **Lens**, vamos criar uma do tipo **Maps**;
     * Clique em **Add layer** e selecione **Documents**;
     * Em **Index patterns**, selecione **route.new-position** e clique em **Add layer**;
-    * Eem **Source details > Layer settings** da layer criada, atribua coloque o **Zoom levels** como **10 -> 24**;
+    * Em **Source details > Layer settings** da layer criada, atribua coloque o **Zoom levels** como **10 -> 24**;
     * Também em **Source details > Layer settings**, atribua um **Name** (Rota 1);
     * Agora, em **Source details > Tooltip fields**, clique em **Add** e selecione o **routeId**;
     * Em **Source details > Filtering**, clique em **Add filter** e passe a seguinte query: `routeId.keyword : "1"`;
