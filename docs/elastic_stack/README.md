@@ -141,3 +141,7 @@ Agora, clique no botão **Create new visualization** e vá em **Lens** (uma das 
 * Por fim, clique em **Save** no canto direito superior e dê um nome para a dashboard (Dashboard de corridas).
 
 *Obs: Se você acessar a dashboard agora, verá no canto direito superior da tela que ela está exibindo os dados dos últimos 15 minutos por padrão. Você pode alterar este valor e a dashboard irá mudar de acordo com aquele campo **timestamp**.*
+
+### Captura de tela da Dashboard
+
+![Fluxo arquitetônico](../assets/kibana_screenshot.png)
